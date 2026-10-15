@@ -213,6 +213,10 @@
 
 </div>
 
+<!--
+贪吃蛇贡献图：等 .github/workflows/snake.yml 第一次跑成功再启用。
+首次跑之前这个链是 404，会显示破图，所以先注释着。
+想启用就把下面这段的注释去掉。
 
 <p align="center">
   <picture>
@@ -221,3 +225,4 @@
     <img alt="contribution snake" src="https://raw.githubusercontent.com/melinhades/melinhades/output/snake.svg" />
   </picture>
 </p>
+-->
