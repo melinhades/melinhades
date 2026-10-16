@@ -168,9 +168,6 @@
 | 项目 | 一句话 |
 | :--- | :--- |
 | [Celeste-AI-Diary-Companion-Blog](https://github.com/melinhades/Celeste-AI-Diary-Companion-Blog) | 给 Celeste 做的一个小世界。 |
-| [robolings](https://github.com/melinhades/robolings) | 机器人学习的小练习，只用 NumPy。 |
-| [Weave](https://github.com/melinhades/Weave) | 一个服务研发平台。 |
-| [CelesteTAS](https://github.com/melinhades/CelesteTAS) | 一些 TAS 录像。 |
 
 <div align="center"><img src="./assets/divider.svg" width="100%" /></div>
 
