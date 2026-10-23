@@ -1,96 +1,104 @@
-<div align="center">
-<img src="./assets/banner.svg" alt="Mount Celeste · pixel night" width="100%" />
+<div align="center"> <img src="./assets/banner.svg" alt="Mount Celeste · pixel night" width="100%" /> <br/> <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=18&pause=1600&color=9B87F5&background=00000000&center=true&vCenter=true&width=860&height=72&lines=Software+Engineering+Student;Celeste+lover;Runner;Building+slowly+but+for+real" alt="Software Engineering Student • Celeste lover • Runner • Building slowly but for real" /> <br/> <img src="https://img.shields.io/badge/TYUT-Software%20Engineering%20Student-9B87F5?style=for-the-badge" alt="TYUT" /> <img src="https://img.shields.io/badge/Celeste-Peak%20cleared-FF6B9D?style=for-the-badge" alt="Celeste" /> </div>
+Who I am
+I am a software engineering student at Taiyuan University of Technology.
 
-<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=18&pause=1600&color=9B87F5&background=00000000&center=true&vCenter=true&width=840&height=72&lines=Software+engineering+student+%40+TYUT;Full-stack%3A+Spring+Boot+%2B+vanilla+JS+%2B+AI;Ten+kilometers+before+sunrise%2C+every+day.;Fall+a+thousand+times%2C+press+retry+a+thousand+times." alt="typing" />
+My work is shaped by two habits that have become more than routines: a daily 10 km run before sunrise, and the way Celeste treats difficulty not as an obstacle to erase, but as something to keep carrying upward.
 
-<img src="https://img.shields.io/badge/TYUT-Software%20Engineering%20%C2%B7%20Junior-9B87F5?style=for-the-badge" alt="TYUT" />
-<img src="https://img.shields.io/badge/Celeste-Peak%20cleared-FF6B9D?style=for-the-badge" alt="Celeste" />
-</div>
-
-## Who I Am
-
-Junior software engineering student at Taiyuan University of Technology.
-
-Two things define how I work: a 10km run before sunrise every day, and Celeste — a pixel game about climbing a mountain. One trains discipline, the other shaped how I deal with difficulty: **falling isn't failure; stopping is.**
-
-This page is not a résumé. It's a record of a path still being walked — from vanilla JavaScript to Spring Boot, from calling libraries to implementing them, from a diary app to an AI system under continuous iteration.
+This page is not a résumé. It is a record of how I learn, build, and keep going when the work is slow and uncertain.
 
 <div align="center"><img src="./assets/divider.svg" width="100%" /></div>
+Why Celeste and running matter
+Celeste taught me that the hardest part is rarely the mechanics. It is the repeated decision to keep trying, to carry the part of yourself that says “you can’t” and still move forward.
 
-## How I Think About Engineering
+Running gives that lesson a body. Each morning, before the city wakes up, I run a distance that offers no reward except the fact that I finished it. No screenshots, no applause, no validation. Just repetition, and the calm that comes from doing the thing that is hard but real.
 
-**From Celeste:** the voice saying "you can't" isn't defeated — it's carried up the mountain with you. Translated to engineering: bugs aren't enemies to eliminate, they're signals to understand. A level can kill you a thousand times; attempt one thousand and one still works.
+I do not see this as a personality trait. I see it as a method:
 
-**From running:** there's no shortcut and no audience for 10km. What separates people isn't the required work — it's whether you still do the things nobody asked for. A compile error at midnight and a 5am alarm are the same kind of moment.
+repeat without drama
+keep the standard honest
+do the unglamorous work before the obvious work
+treat setbacks as data, not identity
+That is the same approach I try to bring to software engineering.
 
-<img src="./assets/dawn.svg" width="100%" />
+<div align="center"><img src="./assets/dawn.svg" width="100%" /></div>
+What I build
+I am interested in engineering that is understandable, durable, and useful. I like building systems where the logic is visible, the trade-offs are clear, and the work can be improved without pretending it was never messy.
 
-The direct product of this mindset is the project below.
+My technical direction is broad but grounded:
 
-<div align="center"><img src="./assets/divider.svg" width="100%" /></div>
-
-## Work
-
-### [Celeste-AI-Diary-Companion-Blog](https://github.com/melinhades/Celeste-AI-Diary-Companion-Blog)
-
-A full-stack blog with an AI diary companion, under active iteration. The stack is deliberately unfashionable — every layer is hand-built and understood:
-
-| Layer | Implementation | Key decisions |
-| :--- | :--- | :--- |
-| Backend | Spring Boot 2.5 + MyBatis-Plus + MySQL | No Spring AI — conversation memory, emotion extraction, and persona validation are hand-written |
-| Frontend | Vanilla HTML/JS, zero frameworks | SSE stream parsing, typing-trajectory collection, debounced interruption — all implemented from scratch |
-| AI pipeline | RAG retrieval (vector cache + time decay + importance fusion + per-source quotas), dual-modal emotion analysis (text × typing dynamics), persona red-line checker | State machine and persona rules documented before any code |
-| Verifiability | Full-chain logging (trigger → retrieval → emotion → generation → feedback), LLM-as-Judge, ablation tests, 👍👎 loop | "It feels better" is not accepted — only measurable deltas |
-
-The question it answers: **how does an AI companion stay warm without fabricating, real-time yet interruptible, and memorable without decaying?** Current focus: retrieval-depth iteration.
+Frontend: user experience, browser logic, interface clarity, interactions that feel intentional
+Backend: APIs, data flow, auth, persistence, service design, real-world constraints
+AI applications: memory, retrieval, emotion-aware interaction, prompt design, evaluation loops
+Learning style: start from fundamentals, build without shortcuts, validate with real usage
+I am not interested in chasing trends just because they are popular. I am more interested in learning how things actually work, and being able to explain why they work.
 
 <div align="center"><img src="./assets/divider.svg" width="100%" /></div>
+Real projects
+melinhades/Celeste-AI-Diary-Companion-Blog
+This is the clearest example of how I think and build.
 
-## Growth Trajectory
+It is a full-stack blog and AI diary companion inspired by Celeste’s emotional and reflective atmosphere. The project is not built around a single clever feature; it is built around a system that tries to balance personal expression, AI assistance, memory, and user experience.
 
-**Currently learning (beyond coursework):**
+The stack is deliberately practical:
 
-| Area | Approach | Status |
-| :--- | :--- | :--- |
-| Machine learning | Implementing from scratch in NumPy, no libraries | In progress |
-| Frontend | Vanilla first, frameworks later | Ongoing |
-| LLM applications | The diary project above as the testbed | Iterating |
-| Running | 10km daily | Daily habit |
+Backend: Java + Spring Boot + MyBatis-Plus + MySQL + Redis
+Frontend: vanilla HTML/CSS/JS
+AI: retrieval, prompt design, conversation memory, emotion-aware processing
+Architecture: service-oriented, real data flow, clear separation of concerns
+What I value here is not just “AI features.” It is the process:
 
-**Consistency, made visible (running can't be screenshotted — commits can):**
+building the data layer before the flash
+making the interaction feel natural without hiding the complexity
+treating the model as one part of a system, not magic
+validating outputs instead of trusting the illusion of intelligence
+This project reflects the way I try to work: make things real, keep them understandable, and improve them through iteration.
 
-<img src="https://streak-stats.demolab.com?user=melinhades&theme=transparent&hide_border=true&ring=9B87F5&fire=FF6B9D&currStreakLabel=9B87F5&sideLabels=9B87F5&currStreakNum=9B87F5&sideNums=9B87F5&dates=8b949e" alt="streak" />
+melinhades/melinhades
+This repository is my personal profile and a place to hold the public, visible version of my thinking.
 
-**Next:**
+It is less about spectacle and more about clarity:
 
-- Turn the from-scratch ML work into a runnable set of notes
-- Go deeper on the diary project: retrieval, memory, verification — one module at a time
-- Keep the streak boring
+who I am
+what I value
+what I build
+how I keep learning
+<div align="center"><img src="./assets/divider.svg" width="100%" /></div>
+Growth trajectory
+I am still early in the path, and I prefer that to be honest.
+
+Currently, I am learning in a way that emphasizes depth over surface:
+
+machine learning and AI fundamentals, implemented from scratch where possible
+frontend fundamentals before framework abstraction
+backend patterns and system design through real projects
+consistency in the boring work that compounds over time
+This is not a “look at my polished project” portfolio. It is a working record of someone learning by doing.
+
+Area	How I approach it	Status
+AI / LLM	Understand mechanisms, not just demos	Ongoing
+Frontend	Vanilla first, then abstraction	Ongoing
+Backend	Learn through real systems and APIs	Ongoing
+Learning	Build small but meaningful things	Continuous
+Running	10 km before sunrise, every day	Habit
+What matters to me is not how many things I can say I know. It is whether I can keep learning with structure and integrity.
 
 <div align="center"><img src="./assets/divider.svg" width="100%" /></div>
+What I value in engineering
+I care about a few things more than hype:
 
-## Contact
+clarity over cleverness
+repeatability over improvisation
+proof over intuition
+durable systems over temporary polish
+honest constraints over fake confidence
+That mindset is shaped by both software work and the personal habits I keep outside of it. A lot of what I do is about learning to keep going when the task is not interesting, when the problem is not elegant, and when the result is not visible yet.
 
-Happy to talk about Celeste's level design, framework-free frontend, RAG engineering, or running.
-
-📮 [jfy2846484252@outlook.com](mailto:jfy2846484252@outlook.com)
+I believe that is where real engineering begins.
 
 <div align="center"><img src="./assets/divider.svg" width="100%" /></div>
+Contact
+If you are interested in conversations about software engineering, AI product work, thoughtful frontend/backend building, or the kind of personal projects that are shaped by discipline and curiosity, I’m always open to talking.
 
-<div align="center">
-*The mountain is right there. Just climb.*
-</div>
+📮 jfy2846484252@outlook.com
 
-<!--
-贪吃蛇贡献图：等 .github/workflows/snake.yml 第一次跑成功再启用。
-首次跑之前这个链是 404，会显示破图，所以先注释着。
-想启用就把下面这段的注释去掉。
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/melinhades/melinhades/output/snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/melinhades/melinhades/output/snake.svg" />
-    <img alt="contribution snake" src="https://raw.githubusercontent.com/melinhades/melinhades/output/snake.svg" />
-  </picture>
-</p>
--->
+<div align="center"><img src="./assets/divider.svg" width="100%" /></div> <div align="center"> <i>The mountain is there. I keep climbing.</i> </div>
