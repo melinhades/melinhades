@@ -1,104 +1,211 @@
-<div align="center"> <img src="./assets/banner.svg" alt="Mount Celeste · pixel night" width="100%" /> <br/> <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=18&pause=1600&color=9B87F5&background=00000000&center=true&vCenter=true&width=860&height=72&lines=Software+Engineering+Student;Celeste+lover;Runner;Building+slowly+but+for+real" alt="Software Engineering Student • Celeste lover • Runner • Building slowly but for real" /> <br/> <img src="https://img.shields.io/badge/TYUT-Software%20Engineering%20Student-9B87F5?style=for-the-badge" alt="TYUT" /> <img src="https://img.shields.io/badge/Celeste-Peak%20cleared-FF6B9D?style=for-the-badge" alt="Celeste" /> </div>
-Who I am
-I am a software engineering student at Taiyuan University of Technology.
+<a name="top"></a>
 
-My work is shaped by two habits that have become more than routines: a daily 10 km run before sunrise, and the way Celeste treats difficulty not as an obstacle to erase, but as something to keep carrying upward.
+<div align="center">
+  <img src="./assets/hero.webp" width="100%" alt="Celeste chapter 7: the summit before dawn — snow, stars and a sea of clouds" />
+  <br/><br/><br/>
+  <img src="./assets/wordmark.webp" width="558" alt="YOU CAN DO THIS." />
+  <br/>
+  <img src="./assets/badge-celeste.webp" width="191" alt="Celeste fan" />
+  <img src="./assets/badge-tuj.webp" width="335" alt="TYUT · Software Eng." />
+  <img src="./assets/badge-10km.webp" width="288" alt="10KM before dawn" />
+  <br/><br/>
+  <a name="now"></a>
+  <strong>Building</strong>: an AI diary for Celeste<br/>
+  <strong>Studying</strong>: software engineering, third year<br/>
+  <strong>Running</strong>: ten kilometers every morning<br/>
+  <br/>
+  <sub><a href="#about">About</a> · <a href="#stack">Stack</a> · <a href="#chapters">Chapters</a> · <a href="#projects">Projects</a> · <a href="#letters">Say hi</a></sub>
+</div>
 
-This page is not a résumé. It is a record of how I learn, build, and keep going when the work is slow and uncertain.
+<a name="about"></a>
 
-<div align="center"><img src="./assets/divider.svg" width="100%" /></div>
-Why Celeste and running matter
-Celeste taught me that the hardest part is rarely the mechanics. It is the repeated decision to keep trying, to carry the part of yourself that says “you can’t” and still move forward.
+## About
 
-Running gives that lesson a body. Each morning, before the city wakes up, I run a distance that offers no reward except the fact that I finished it. No screenshots, no applause, no validation. Just repetition, and the calm that comes from doing the thing that is hard but real.
+I'm a third-year software engineering student at Taiyuan University of Technology.
 
-I do not see this as a personality trait. I see it as a method:
+Most of what's on this account is code I wrote because I wanted to understand something. The Celeste diary is the current one — a blog, an assistant, and a lot of pixel art around it.
 
-repeat without drama
-keep the standard honest
-do the unglamorous work before the obvious work
-treat setbacks as data, not identity
-That is the same approach I try to bring to software engineering.
+<div align="center">
+  <img src="./assets/portrait.webp" width="112" alt="Madeline's pixel portrait" />
+</div>
 
-<div align="center"><img src="./assets/dawn.svg" width="100%" /></div>
-What I build
-I am interested in engineering that is understandable, durable, and useful. I like building systems where the logic is visible, the trade-offs are clear, and the work can be improved without pretending it was never messy.
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.webp" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.webp" />
+    <img src="./assets/divider-dark.webp" width="94%" alt="" />
+  </picture>
+</div>
 
-My technical direction is broad but grounded:
+### <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/icons/reflection-dark.webp"><img src="./assets/icons/reflection.webp" width="26" alt=""></picture> Celeste
 
-Frontend: user experience, browser logic, interface clarity, interactions that feel intentional
-Backend: APIs, data flow, auth, persistence, service design, real-world constraints
-AI applications: memory, retrieval, emotion-aware interaction, prompt design, evaluation loops
-Learning style: start from fundamentals, build without shortcuts, validate with real usage
-I am not interested in chasing trends just because they are popular. I am more interested in learning how things actually work, and being able to explain why they work.
+Main story finished. Still missing the golden strawberries. I record some TAS runs, and the diary app is built around the game.
 
-<div align="center"><img src="./assets/divider.svg" width="100%" /></div>
-Real projects
-melinhades/Celeste-AI-Diary-Companion-Blog
-This is the clearest example of how I think and build.
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.webp" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.webp" />
+    <img src="./assets/divider-dark.webp" width="94%" alt="" />
+  </picture>
+</div>
 
-It is a full-stack blog and AI diary companion inspired by Celeste’s emotional and reflective atmosphere. The project is not built around a single clever feature; it is built around a system that tries to balance personal expression, AI assistance, memory, and user experience.
+<a name="stack"></a>
 
-The stack is deliberately practical:
+### <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/icons/core-dark.webp"><img src="./assets/icons/core.webp" width="26" alt=""></picture> Stack
 
-Backend: Java + Spring Boot + MyBatis-Plus + MySQL + Redis
-Frontend: vanilla HTML/CSS/JS
-AI: retrieval, prompt design, conversation memory, emotion-aware processing
-Architecture: service-oriented, real data flow, clear separation of concerns
-What I value here is not just “AI features.” It is the process:
+|  |  |
+| :--- | :--- |
+| Languages | Java, Python, JavaScript, SQL |
+| Backend | Spring Boot 3.2, MyBatis-Plus, JWT |
+| Data | MySQL, Redis |
+| Frontend | Handwritten HTML/CSS/JS — no framework, no build step |
+| AI | Qwen2.5-7B for chat, bge-m3 for embeddings, through SiliconFlow |
+| Ops | Docker, Prometheus |
 
-building the data layer before the flash
-making the interaction feel natural without hiding the complexity
-treating the model as one part of a system, not magic
-validating outputs instead of trusting the illusion of intelligence
-This project reflects the way I try to work: make things real, keep them understandable, and improve them through iteration.
+Going deeper on three things right now: machine learning from scratch with NumPy, frontend without frameworks, and LLM applications. The diary is where the last one gets tested.
 
-melinhades/melinhades
-This repository is my personal profile and a place to hold the public, visible version of my thinking.
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.webp" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.webp" />
+    <img src="./assets/divider-dark.webp" width="94%" alt="" />
+  </picture>
+</div>
 
-It is less about spectacle and more about clarity:
+<a name="chapters"></a>
 
-who I am
-what I value
-what I build
-how I keep learning
-<div align="center"><img src="./assets/divider.svg" width="100%" /></div>
-Growth trajectory
-I am still early in the path, and I prefer that to be honest.
+### <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/icons/intro-dark.webp"><img src="./assets/icons/intro.webp" width="26" alt=""></picture> How I got here
 
-Currently, I am learning in a way that emphasizes depth over surface:
+The last few years, arranged as game chapters. Nine in the game; I used eight — the one I left out hasn't happened yet.
 
-machine learning and AI fundamentals, implemented from scratch where possible
-frontend fundamentals before framework abstraction
-backend patterns and system design through real projects
-consistency in the boring work that compounds over time
-This is not a “look at my polished project” portfolio. It is a working record of someone learning by doing.
+<div align="center">
+  <img src="./assets/mountain.webp" width="310" alt="A grey-purple snow mountain" />
+</div>
 
-Area	How I approach it	Status
-AI / LLM	Understand mechanisms, not just demos	Ongoing
-Frontend	Vanilla first, then abstraction	Ongoing
-Backend	Learn through real systems and APIs	Ongoing
-Learning	Build small but meaningful things	Continuous
-Running	10 km before sunrise, every day	Habit
-What matters to me is not how many things I can say I know. It is whether I can keep learning with structure and integrity.
+|  | Chapter | In my version |
+| :---: | :--- | :--- |
+| <img src="./assets/chapters/ch1.webp" width="120" alt="Chapter 1 Forsaken City cover art" /> | **Forsaken City** | First time travelling alone. |
+| <img src="./assets/chapters/ch2.webp" width="120" alt="Chapter 2 Old Site cover art" /> | **Old Site** | Things I thought were finished were still waiting where I left them. |
+| <img src="./assets/chapters/ch3.webp" width="120" alt="Chapter 3 Celestial Resort cover art" /> | **Celestial Resort** | Cleaning up a mess nobody else wanted. |
+| <img src="./assets/chapters/ch4.webp" width="120" alt="Chapter 4 Golden Ridge cover art" /> | **Golden Ridge** | Headwind the whole way. |
+| <img src="./assets/chapters/ch5.webp" width="120" alt="Chapter 5 Mirror Temple cover art" /> | **Mirror Temple** | The part of me I'd rather not look at. |
+| <img src="./assets/chapters/ch6.webp" width="120" alt="Chapter 6 Reflection cover art" /> | **Reflection** | Deciding whether to keep going. |
+| <img src="./assets/chapters/ch7.webp" width="120" alt="Chapter 7 The Summit cover art" /> | **The Summit** | Ten kilometers done, the sun is up. |
+| <img src="./assets/chapters/ch9.webp" width="120" alt="Chapter 9 Farewell cover art" /> | **Farewell** | Not yet. Saving it for later. |
 
-<div align="center"><img src="./assets/divider.svg" width="100%" /></div>
-What I value in engineering
-I care about a few things more than hype:
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.webp" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.webp" />
+    <img src="./assets/divider-dark.webp" width="94%" alt="" />
+  </picture>
+</div>
 
-clarity over cleverness
-repeatability over improvisation
-proof over intuition
-durable systems over temporary polish
-honest constraints over fake confidence
-That mindset is shaped by both software work and the personal habits I keep outside of it. A lot of what I do is about learning to keep going when the task is not interesting, when the problem is not elegant, and when the result is not visible yet.
+<a name="projects"></a>
 
-I believe that is where real engineering begins.
+### <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/icons/cassette-dark.webp"><img src="./assets/icons/cassette.webp" width="26" alt=""></picture> Projects
 
-<div align="center"><img src="./assets/divider.svg" width="100%" /></div>
-Contact
-If you are interested in conversations about software engineering, AI product work, thoughtful frontend/backend building, or the kind of personal projects that are shaped by discipline and curiosity, I’m always open to talking.
+Four repositories. Mostly things I built to learn something, all finished enough to run.
 
-📮 jfy2846484252@outlook.com
+<details>
+<summary>Open the list</summary>
 
-<div align="center"><img src="./assets/divider.svg" width="100%" /></div> <div align="center"> <i>The mountain is there. I keep climbing.</i> </div>
+| Project | What it is | Stack |
+| :--- | :--- | :--- |
+| [Celeste-AI-Diary-Companion-Blog](https://github.com/melinhades/Celeste-AI-Diary-Companion-Blog) | Blog, AI diary companion and Celeste UI | Spring Boot, plain JS, MySQL |
+| [robolings](https://github.com/melinhades/robolings) | Machine learning exercises | Python, NumPy |
+| [Weave](https://github.com/melinhades/Weave) | A service development platform | Java |
+| [CelesteTAS](https://github.com/melinhades/CelesteTAS) | Tool-assisted speedrun recordings | Celeste |
+
+</details>
+
+<div align="center">
+  <sub>Contribution history</sub>
+  <br/>
+  <img src="https://streak-stats.demolab.com?user=melinhades&theme=transparent&hide_border=true&ring=9B87F5&fire=FF6B9D&currStreakLabel=9B87F5&sideLabels=9B87F5&currStreakNum=9B87F5&sideNums=9B87F5&dates=8b949e" alt="GitHub contribution streak" />
+</div>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.webp" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.webp" />
+    <img src="./assets/divider-dark.webp" width="94%" alt="" />
+  </picture>
+</div>
+
+### <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/icons/checkpoint-dark.webp"><img src="./assets/icons/checkpoint.webp" width="26" alt=""></picture> A day
+
+<details>
+<summary>Open the timeline</summary>
+
+| Time | What |
+| :--- | :--- |
+| Before dawn | Ten kilometers. Then the day can start. |
+| Daytime | Classes, coursework, the occasional staring into space |
+| Evening | Reading and code. Often stuck in the same place for hours. |
+| Late night | A couple of Celeste levels, or writing something nobody reads. |
+
+</details>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.webp" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.webp" />
+    <img src="./assets/divider-dark.webp" width="94%" alt="" />
+  </picture>
+</div>
+
+### <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/icons/farewell-dark.webp"><img src="./assets/icons/farewell.webp" width="26" alt=""></picture> What's next
+
+<details>
+<summary>Open the list</summary>
+
+- Turn the machine learning exercises into notes that actually run
+- Build one complete application from scratch, no framework
+- Make the diary solid instead of big
+
+</details>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.webp" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.webp" />
+    <img src="./assets/divider-dark.webp" width="94%" alt="" />
+  </picture>
+</div>
+
+<a name="letters"></a>
+
+### <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/icons/heart-dark.webp"><img src="./assets/icons/heart.webp" width="26" alt=""></picture> Say hi
+
+<div align="center">
+  <img src="./assets/postcard.webp" width="45%" alt="A handwritten note: You can do this. / Falling is fine. Just try again." />
+</div>
+
+If any of this is close to what you're working on, email is the fastest way to reach me.
+
+<div align="center">
+
+<img src="./assets/footer.webp" width="100%" alt="Above the summit: violet light and a slope of cloud" />
+
+<br/>
+<sub>Contact: <a href="mailto:jfy2846484252@outlook.com">jfy2846484252@outlook.com</a> · <a href="#top">Back to top</a></sub>
+
+<br/>
+<sub>Pixel art from <a href="https://www.celestegame.com/">Celeste</a> © Maddy Makes Games, used for a personal page.</sub>
+
+</div>
+
+<!--
+Contribution snake: enable once .github/workflows/snake.yml has run successfully.
+Before the first run the links 404 and show broken images, which is why this stays
+commented out. Remove the comment markers below to turn it on.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/melinhades/melinhades/output/snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/melinhades/melinhades/output/snake.svg" />
+    <img alt="contribution snake" src="https://raw.githubusercontent.com/melinhades/melinhades/output/snake.svg" />
+  </picture>
+</p>
+-->
