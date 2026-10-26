@@ -17,11 +17,13 @@ import os
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageChops, ImageDraw, ImageFont, ImageStat
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageStat
+import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets"
 DEFAULT_SRC = ROOT.parent / "blog-ui"
+ART = ROOT.parent / "art"        # hand-made source art kept beside the palette
 
 PURPLE = (155, 135, 245)
 TINT_LIGHT = (58, 44, 92)         # heading text / icon glyph on the light page
@@ -30,6 +32,8 @@ CONTENT_W = 948          # GitHub renders the article at 948 CSS px on a 1280 vi
 Q_PAINT = 86             # painterly art: PSNR >= 44 dB at this point
 Q_PIXEL = 94             # pixel art / flat UI: keep edges clean
 Q_UI = 92
+DUSK = (128, 92, 158)    # the footer's violet ambient, used to grade the portrait
+
 
 
 # --------------------------------------------------------------------------- utils
@@ -112,8 +116,83 @@ def build_hero(src: Path, report: list) -> None:
     save(im, "hero.webp", Q_PAINT, report)
 
 
+def character_cutout(path: Path) -> Image.Image:
+    """Knock the white studio backdrop out of the portrait and keep a soft rim.
+
+    A plain colour key eats the near-white highlights in the hair and the pale
+    sweater, so the backdrop is flood-filled inward from the border instead: only
+    white that is connected to the frame is removed. The 2 px anti-aliased rim
+    that the fill leaves behind is turned into partial alpha and un-matted, which
+    stops a white halo from showing up once she sits on the violet dusk band.
+    """
+    art = Image.open(path).convert("RGB")
+    w, h = art.size
+    sentinel = (0, 255, 0)
+    work = art.copy()
+    px = work.load()
+
+    step = max(4, w // 160)
+    seeds = ([(x, 0) for x in range(0, w, step)] +
+             [(x, h - 1) for x in range(0, w, step)] +
+             [(0, y) for y in range(0, h, step)] +
+             [(w - 1, y) for y in range(0, h, step)])
+    for s in seeds:
+        r, g, b = px[s]
+        if (r, g, b) == sentinel or min(r, g, b) < 232:
+            continue
+        ImageDraw.floodfill(work, s, sentinel, thresh=26)
+
+    a = np.asarray(work).astype(np.float32)
+    bg = (a[:, :, 1] == 255) & (a[:, :, 0] == 0) & (a[:, :, 2] == 0)
+    dilated = np.asarray(
+        Image.fromarray(bg.astype(np.uint8) * 255).filter(ImageFilter.MaxFilter(5))
+    ) > 0
+    rim = dilated & ~bg
+
+    alpha = np.where(bg, 0.0, 1.0)
+    minc = a.min(axis=2)
+    alpha[rim] = np.clip((255.0 - minc[rim]) / 45.0, 0.0, 1.0)
+
+    al = alpha[:, :, None]
+    unmatted = np.clip((a - 255.0 * (1.0 - al)) / np.maximum(al, 1e-3), 0, 255)
+    out = Image.fromarray(np.dstack([unmatted, alpha * 255.0]).astype(np.uint8), "RGBA")
+    return trim(out)
+
+
+def composite_character(base: Image.Image, fig: Image.Image, x: int, height: int,
+                        fade: float = 0.16, fade_left: float = 0.10) -> Image.Image:
+    """Sit the portrait on the dusk band: grade it, dissolve its cut edges into the mist.
+
+    The grade is a light blend toward the band's own violet, so the pink hair and
+    the pale sweater still read as themselves instead of looking pasted on. The
+    bottom and left fades replace what would otherwise be two hard cuts — a bust
+    runs off the bottom edge of a 3:1 banner, and the illustration itself crops
+    the long hair at its left border.
+    """
+    k = height / fig.height
+    fig = fig.resize((max(1, round(fig.width * k)), height), Image.LANCZOS)
+
+    alpha = fig.getchannel("A")
+    rgb = fig.convert("RGB")
+    rgb = Image.blend(rgb, Image.new("RGB", rgb.size, DUSK), 0.12)
+    rgb = Image.eval(rgb, lambda v: int(v * 0.95))
+    fig = rgb.convert("RGBA")
+    fig.putalpha(alpha)
+
+    a = np.asarray(fig.getchannel("A")).astype(np.float32)
+    hh, ww = fig.height, fig.width
+    down = np.clip((hh - 1 - np.arange(hh, dtype=np.float32)) / max(1.0, hh * fade), 0.0, 1.0)
+    left = np.clip(np.arange(ww, dtype=np.float32) / max(1.0, ww * fade_left), 0.0, 1.0)
+    a = a * down[:, None] * left[None, :]
+    fig.putalpha(Image.fromarray(a.astype(np.uint8), "L"))
+
+    out = base.copy()
+    out.paste(fig, (x, base.height - fig.height), fig)
+    return out
+
+
 def build_footer(src: Path, report: list) -> None:
-    """Dusk sky over the cloud slope.
+    """Dusk sky over the cloud slope, with the portrait in the left foreground.
 
     `SummitEnd/08.png` is the character cut-out layer: flattened onto RGB it is a
     pure-black sheet whose right 45% is empty — a black hole on the light theme.
@@ -122,7 +201,15 @@ def build_footer(src: Path, report: list) -> None:
     """
     im = Image.open(os.path.join(src, "Atlases", "SummitEnd", "00.png")).convert("RGB")
     im = im.crop((0, 294, 1068, 650))
+
+    portrait = ART / "readme-end.jpg"
+    if portrait.exists():
+        fig = character_cutout(portrait)
+        im = composite_character(im, fig, x=92, height=326)
+    else:
+        print(f"    footer: portrait source missing ({portrait}), plain band used")
     save(im, "footer.webp", Q_PAINT, report)
+
 
 
 def build_mountain(src: Path, report: list) -> None:

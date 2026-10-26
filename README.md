@@ -208,7 +208,7 @@ If any of this is close to what you're working on, email is the fastest way to r
 
 <div align="center">
 
-<img src="./assets/footer.webp" width="100%" alt="Above the summit: violet light and a slope of cloud" />
+<img src="./assets/footer.webp" width="100%" alt="Above the summit at dusk: violet light, a slope of cloud, and Madeline holding a cassette" />
 
 <br/>
 <div style="font-family:'Renogare','CelesteZH',sans-serif;font-size:14px">
