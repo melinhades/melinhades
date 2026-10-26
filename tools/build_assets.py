@@ -24,6 +24,8 @@ OUT = ROOT / "assets"
 DEFAULT_SRC = ROOT.parent / "blog-ui"
 
 PURPLE = (155, 135, 245)
+TINT_LIGHT = (58, 44, 92)         # heading text / icon glyph on the light page
+TINT_DARK = (208, 196, 255)       # heading text / icon glyph on #0d1117
 CONTENT_W = 948          # GitHub renders the article at 948 CSS px on a 1280 viewport
 Q_PAINT = 86             # painterly art: PSNR >= 44 dB at this point
 Q_PIXEL = 94             # pixel art / flat UI: keep edges clean
@@ -176,8 +178,6 @@ def build_icons(src: Path, report: list) -> None:
         "cassette": ("Atlases", "Gui", "collectables", "cassette.png"),
         "heart": ("celeste-icons", "heartgem1.png"),
     }
-    TINT_LIGHT = (58, 44, 92)
-    TINT_DARK = (208, 196, 255)
     for name, parts in list(icons.items()) + [("checkpoint", ("Atlases", "Gui", "checkpoint.png"))]:
         glyph = load(src, *parts)
         # the checkpoint glyph ships white; tint it first so it is not invisible on white
@@ -317,6 +317,34 @@ def build_badges(src: Path, report: list) -> None:
     print("    widths for README:", {k: v // 2 for k, v in widths.items()})
 
 
+def build_headings(src: Path, report: list) -> None:
+    """Section titles rendered in Renogare, light/dark variants.
+
+    GitHub strips ``@font-face`` from README HTML, so any text that must wear
+    the game font is baked into an image — same trick as the badges and the
+    wordmark. Two variants per title, tinted with the same purple the icons
+    use, so the glyph stays legible on both themes.
+    """
+    font_path = src / "celeste-font-en" / "Renogare-Regular.otf"
+    headings = [
+        "About", "Celeste", "Stack", "How I got here",
+        "Projects", "A day", "What's next", "Say hi",
+    ]
+    font_size = 46          # 2x for a ~23 px display height
+    font = ImageFont.truetype(str(font_path), font_size)
+    pad = 6
+    for text in headings:
+        bbox = font.getbbox(text)
+        tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+        w, h = tw + pad * 2, th + pad * 2
+        slug = text.lower().replace(" ", "-").replace("'", "")
+        for theme, color in (("", TINT_LIGHT), ("-dark", TINT_DARK)):
+            img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+            d = ImageDraw.Draw(img)
+            d.text((pad - bbox[0], pad - bbox[1]), text, font=font, fill=color + (255,))
+            save(img, f"headings/{slug}{theme}.webp", Q_UI, report)
+
+
 # --------------------------------------------------------------------------- main
 EXAMPLE_USAGE = "python tools/build_assets.py --src ../../blog-ui"
 
@@ -342,6 +370,7 @@ def main() -> int:
     build_divider(src, report)
     build_wordmark(src, report)
     build_badges(src, report)
+    build_headings(src, report)
 
     keep = {(OUT / n).resolve() for n, _, _ in report}
     removed = []
