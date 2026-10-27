@@ -5,9 +5,6 @@
   <br/><br/><br/>
   <img src="./assets/wordmark.webp" width="558" alt="YOU CAN DO THIS." />
   <br/>
-  <img src="./assets/badge-celeste.webp" width="191" alt="Celeste fan" />
-  <img src="./assets/badge-tuj.webp" width="335" alt="TYUT · Software Eng." />
-  <img src="./assets/badge-10km.webp" width="288" alt="10KM before dawn" />
   <br/><br/>
   <a name="now"></a>
   <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/now-dark.webp"><img src="./assets/texts/now.webp" width="379" alt="Building: an AI diary for Celeste Studying: software engineering, third year Running: ten kilometers every morning"></picture>
