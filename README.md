@@ -63,14 +63,6 @@
   </picture>
 </div>
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.webp" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.webp" />
-    <img src="./assets/divider-dark.webp" width="94%" alt="" />
-  </picture>
-</div>
-
 <a name="projects"></a>
 
 ### <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/icons/cassette-dark.webp"><img src="./assets/icons/cassette.webp" width="26" alt=""></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/headings/projects-dark.webp"><img src="./assets/headings/projects.webp" height="20" alt="Projects"></picture>
