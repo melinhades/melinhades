@@ -63,27 +63,6 @@
   </picture>
 </div>
 
-<a name="chapters"></a>
-
-### <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/icons/intro-dark.webp"><img src="./assets/icons/intro.webp" width="26" alt=""></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/headings/how-i-got-here-dark.webp"><img src="./assets/headings/how-i-got-here.webp" height="20" alt="How I got here"></picture>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/chapters-intro-dark.webp"><img src="./assets/texts/chapters-intro.webp" width="879" alt="The last few years, arranged as game chapters. Nine in the game; I used eight — the one I left out hasn't happened yet."></picture>
-
-<div align="center">
-  <img src="./assets/mountain.webp" width="310" alt="A grey-purple snow mountain" />
-</div>
-
-<table>
-<tr><td><img src="./assets/chapters/ch1.webp" width="120" alt="Chapter 1 Forsaken City cover art" /></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-name-1-dark.webp"><img src="./assets/texts/ch-name-1.webp" width="120" alt="Forsaken City"></picture></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-desc-1-dark.webp"><img src="./assets/texts/ch-desc-1.webp" width="224" alt="First time travelling alone."></picture></td></tr>
-<tr><td><img src="./assets/chapters/ch2.webp" width="120" alt="Chapter 2 Old Site cover art" /></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-name-2-dark.webp"><img src="./assets/texts/ch-name-2.webp" width="69" alt="Old Site"></picture></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-desc-2-dark.webp"><img src="./assets/texts/ch-desc-2.webp" width="507" alt="Things I thought were finished were still waiting where I left them."></picture></td></tr>
-<tr><td><img src="./assets/chapters/ch3.webp" width="120" alt="Chapter 3 Celestial Resort cover art" /></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-name-3-dark.webp"><img src="./assets/texts/ch-name-3.webp" width="137" alt="Celestial Resort"></picture></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-desc-3-dark.webp"><img src="./assets/texts/ch-desc-3.webp" width="354" alt="Cleaning up a mess nobody else wanted."></picture></td></tr>
-<tr><td><img src="./assets/chapters/ch4.webp" width="120" alt="Chapter 4 Golden Ridge cover art" /></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-name-4-dark.webp"><img src="./assets/texts/ch-name-4.webp" width="118" alt="Golden Ridge"></picture></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-desc-4-dark.webp"><img src="./assets/texts/ch-desc-4.webp" width="216" alt="Headwind the whole way."></picture></td></tr>
-<tr><td><img src="./assets/chapters/ch5.webp" width="120" alt="Chapter 5 Mirror Temple cover art" /></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-name-5-dark.webp"><img src="./assets/texts/ch-name-5.webp" width="121" alt="Mirror Temple"></picture></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-desc-5-dark.webp"><img src="./assets/texts/ch-desc-5.webp" width="313" alt="The part of me I'd rather not look at."></picture></td></tr>
-<tr><td><img src="./assets/chapters/ch6.webp" width="120" alt="Chapter 6 Reflection cover art" /></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-name-6-dark.webp"><img src="./assets/texts/ch-name-6.webp" width="86" alt="Reflection"></picture></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-desc-6-dark.webp"><img src="./assets/texts/ch-desc-6.webp" width="280" alt="Deciding whether to keep going."></picture></td></tr>
-<tr><td><img src="./assets/chapters/ch7.webp" width="120" alt="Chapter 7 The Summit cover art" /></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-name-7-dark.webp"><img src="./assets/texts/ch-name-7.webp" width="103" alt="The Summit"></picture></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-desc-7-dark.webp"><img src="./assets/texts/ch-desc-7.webp" width="298" alt="Ten kilometers done, the sun is up."></picture></td></tr>
-<tr><td><img src="./assets/chapters/ch9.webp" width="120" alt="Chapter 9 Farewell cover art" /></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-name-8-dark.webp"><img src="./assets/texts/ch-name-8.webp" width="72" alt="Farewell"></picture></td><td><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/ch-desc-8-dark.webp"><img src="./assets/texts/ch-desc-8.webp" width="225" alt="Not yet. Saving it for later."></picture></td></tr>
-</table>
-
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/divider-dark.webp" />
