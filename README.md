@@ -2,8 +2,7 @@
 
 <div align="center">
   <img src="./assets/hero.webp" width="100%" alt="Celeste chapter 7: the summit before dawn — snow, stars and a sea of clouds" />
-  <br/><br/><br/>
-  <img src="./assets/wordmark.webp" width="558" alt="YOU CAN DO THIS." />
+
   <br/>
   <br/><br/>
   <a href="#about"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/nav-about-dark.webp"><img src="./assets/texts/nav-about.webp" width="49" alt="About"></picture></a>&nbsp;<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/nav-sep-dark.webp"><img src="./assets/texts/nav-sep.webp" width="3" alt="·"></picture>&nbsp;<a href="#stack"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/nav-stack-dark.webp"><img src="./assets/texts/nav-stack.webp" width="45" alt="Stack"></picture></a>&nbsp;<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/nav-sep-dark.webp"><img src="./assets/texts/nav-sep.webp" width="3" alt="·"></picture>&nbsp;<a href="#chapters"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/nav-chapters-dark.webp"><img src="./assets/texts/nav-chapters.webp" width="73" alt="Chapters"></picture></a>&nbsp;<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/nav-sep-dark.webp"><img src="./assets/texts/nav-sep.webp" width="3" alt="·"></picture>&nbsp;<a href="#projects"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/nav-projects-dark.webp"><img src="./assets/texts/nav-projects.webp" width="65" alt="Projects"></picture></a>&nbsp;<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/nav-sep-dark.webp"><img src="./assets/texts/nav-sep.webp" width="3" alt="·"></picture>&nbsp;<a href="#letters"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/texts/nav-say-hi-dark.webp"><img src="./assets/texts/nav-say-hi.webp" width="48" alt="Say hi"></picture></a>
